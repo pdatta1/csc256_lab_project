@@ -2,6 +2,12 @@
 CSC 256 Lab project 2023
 
 
+# Webapp Tools Tools 
+    - Django Framework -> Webapp
+    - Sqlite -> Database storage
+    - python-decouple -> Reading Env variables
+    
+
 # first thing first, make sure you have python installed, pip installed as well.
 
 # Web Framework 
@@ -44,6 +50,7 @@ CSC 256 Lab project 2023
             - type "python manage.py runserver"
 
         - yay! you have a running server
+            - url should be at http://127.0.0.1:8000/
 
 
 # Project Skeleton Description
