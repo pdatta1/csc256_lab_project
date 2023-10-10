@@ -1,6 +1,14 @@
 # csc256_lab_project
 CSC 256 Lab project 2023
 
+# Project Description
+    - A Todo List(task) app that use basic crud operations by allow 
+      users to create, update, read and delete tasks
+
+    - Functinalities( please add more, these are just basic)
+        - User Authentication
+        - User Tasks Display - Using listview
+        - Navigation Menu ( tasks, user profile, signin, signout, etc)
 
 # Webapp Tools Tools 
     - Django Framework -> Webapp
