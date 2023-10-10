@@ -13,18 +13,18 @@ from django.db.models import (
     ForeignKey
 )
 
-from users.models import TodoAppUser
+from users.models import TodoUser
 
 
 class Tasks(models.Model):
 
-    task_id: UUIDField[UUID] = UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    task_name: CharField[str] = CharField(max_length=64, blank=False, null=False, unique=False)
-    task_description: CharField[str] = CharField(max_length=500, blank=False, null=False, unique=False)
-    created_by: DateTimeField[datetime] = DateTimeField(auto_now_add=True)
-    task_completed: BooleanField[bool] = BooleanField(default=False)
+    task_id = UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    task_name = CharField(max_length=64, blank=False, null=False, unique=False)
+    task_description = CharField(max_length=500, blank=False, null=False, unique=False)
+    created_by = DateTimeField(auto_now_add=True)
+    task_completed = BooleanField(default=False)
 
-    task_user = ForeignKey(to=TodoAppUser, on_delete=models.CASCADE, related_name='user_tasks')
+    task_user = ForeignKey(to=TodoUser, on_delete=models.CASCADE, related_name='todo_user_tasks')
 
     
     def __str__(self) -> str:

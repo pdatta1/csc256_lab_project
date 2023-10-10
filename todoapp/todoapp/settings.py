@@ -25,6 +25,7 @@ SECRET_KEY = 'django-insecure-z_np0l7)%gs0f3p#p=$e@)n!2tc+szjse2ql(0-8j8j5fyo=56
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+AUTH_USER_MODEL = 'users.TodoUser'
 ALLOWED_HOSTS = []
 
 
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'tasks',
 ]
 
 MIDDLEWARE = [
