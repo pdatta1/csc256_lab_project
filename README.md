@@ -5,3 +5,11 @@ Modules needed to run this web app:
 -----------------------------
 pip install bottle
 pip install beaker
+
+
+
+
+- Testing
+    - pip install selenium
+    - python tests/LoginTest.py
+    - python tests/ItemUpdateTest.py
