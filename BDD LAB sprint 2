@@ -1,0 +1,152 @@
+              Group 10 BDD lab
+
+
+1. Introduction 
+
+1.1. Purpose 
+
+The purpose of this lab is to provide the user with a better and more well-rounded understanding of the Behavior driven development tools thought the use of these tools such as behave a Gherkin With the hope they can use it to further their knowledge, this document is here to list the software required for the BDD Lab. 
+
+1.2. Scope 
+
+This Sub SRS provides details specific to the BDD Lab, including its environments requirements, expected outcomes, and deliverables. 
+
+1.4. What is BDD? 
+
+Behavior-Driven Development (BDD) is an agile software development process that promotes cooperation between developers, quality assurance specialists, and customer representatives in software projects. 
+
+1.3. Definitions and Acronyms 
+
+BDD: Behavior Driven Development 
+
+Gherkin: Language used for writing tests in BDD 
+
+Behave: A BDD tool for Python 
+
+IDE: Integrated Development environment 
+
+CLI: Command Line Interface 
+
+ 
+ 
+
+2. BDD Lab Overview 
+
+2.1. General Requirements 
+
+Familiarity with the Gherkin language 
+
+Usage of Behave for implementing tests 
+
+Familiarity with command line interfaces 
+
+Clear distinction between Features, Scenarios, and Steps 
+
+A web application to test (i.e.., website) 
+
+ 
+
+2.2. Lab Tools 
+
+Behave 
+
+Python  
+
+IDE (I.e., Visual studios) 
+
+Selenium (for web application testing in some scenarios) 
+
+ 
+
+ 
+ 
+
+3. Functional Requirements 
+
+3.1. Feature File Creation 
+
+Create multiple feature files demonstrating different scenarios. 
+
+Usage of Scenario Outline for repetitive tests. 
+
+Use of Tags for organizing and running specific groups of tests. 
+
+ 
+
+3.2. Step Definitions 
+
+Writing step definitions for each step in the feature file. 
+
+Implement Python functions to perform actions for each step. 
+
+Proper usage of step functions using step decorators 
+
+ 
+
+3.3. Running Tests 
+
+Use Behave commands to run tests. 
+
+Interpretation of test results, both passes, and failures. 
+
+ 
+ 
+
+4. Non-functional Requirements 
+
+4.1. Documentation 
+
+Each feature file should have a corresponding explanation. 
+
+Each step definition should have comments that are clear. 
+
+When making comments make sure each one has meaning and there aren't a bunch of them 
+
+A summary report detailing the number of passed, failed, and skipped tests. 
+
+Each scenario should illustrate a specific behavior of the application 
+
+ 
+
+4.2. Collaboration 
+
+Open communication among team members when defining scenarios. 
+
+Use GitHub for version control 
+
+Microsoft Teams is used for discussions 
+
+ 
+ 
+
+5. Deliverables 
+
+A minimum of 5 feature files demonstrating various scenarios. 
+
+Corresponding step definitions for all feature files. 
+
+A documentation report explaining the purpose and functionality of each feature file. 
+
+A test report showing the results after running the tests. 
+
+ 
+ 
+
+6. Conclusion 
+
+This lab should provide experience using Behavior Driven Deployment practices and 	tools. The SRS gives focus to completing objectives that are part of the BDD Lab. 
+ 
+
+7. Appendices 
+
+7.1. Sample Scenarios 
+
+Scenario 1: Logging in with valid credentials 
+
+Scenario 2: Add an item to our to-do list 
+
+Scenario 3: Logging in with wrong credentials 
+
+Scenario 4: remove an item to the to-do list 
+
+Scenario 5: Open up list view to make sure to do items are accurately reflected. 
