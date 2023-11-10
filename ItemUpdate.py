@@ -1,7 +1,7 @@
 # functionality to add new items with a blank list and
 # update with the page loaded from the list
 import bottle
-from bottle import route, get, post, request, run, redirect
+from bottle import route, get, post, request, run, redirect, template
 from beaker.middleware import SessionMiddleware
 import YourList
 import Login
