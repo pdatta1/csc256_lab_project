@@ -9,9 +9,9 @@ pip install beaker
 
 
 
-- Testing
+- Testing Selenium
     - pip install selenium
     - Run the server first
         - python Login.py
-    - python tests/LoginTest.py
-    - python tests/ItemUpdateTest.py
+    - python tests/selenium/LoginTest.py
+    - python tests/selenium/ItemUpdateTest.py
