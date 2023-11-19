@@ -15,3 +15,9 @@ pip install beaker
         - python Login.py
     - python tests/selenium/LoginTest.py
     - python tests/selenium/ItemUpdateTest.py
+
+
+- Testing BDD
+    - make sure these are installed with pip
+        - pip install behave
+        - RUN 'behave' in the root directory of the project
