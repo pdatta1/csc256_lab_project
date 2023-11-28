@@ -15,6 +15,9 @@ function processForm(action) {
         case 'sort':
             form.action = '/sortItems';
             break;
+        case 'json':
+            form.action = '/getJson';
+            break;
 
     }
 

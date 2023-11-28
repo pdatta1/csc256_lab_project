@@ -11,6 +11,9 @@
         <button class="side-bar button is-danger is-light " type="button" onclick="processForm('delete')">Delete Item</button>
 
         <button class="side-bar button is-info is-light " type="button" onclick="processForm('sort')">Sort Items</button>
+
+        <button class="side-bar button is-success is-light " type="button" onclick="processForm('json')">Generate Json</button>
+
     </div>
     
     <div class='column'>
