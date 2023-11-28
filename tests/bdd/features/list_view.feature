@@ -1,4 +1,4 @@
-# features/todo_list.feature
+# features/list_view.feature
 
 Feature: ToDo List Management
 

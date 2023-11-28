@@ -20,4 +20,4 @@ pip install beaker
 - Testing BDD
     - make sure these are installed with pip
         - pip install behave
-        - RUN 'behave' in the root directory of the project
+        - RUN 'behave' in the root directory of the projectLogging into todo list with valid credentials 

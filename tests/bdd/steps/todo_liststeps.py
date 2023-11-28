@@ -12,24 +12,27 @@ def typeInfo(context):
     context.driver.get("http://localhost:8080")
 
 
-@when(u'Enter username "{User}" and password "{password}"')
+@when(u'Enter username "{user}" and password "{password}"')
 def verifyCred(context, user, password):
-    context.driver.find_element_by_name("username").send_keys(user)
-    context.driver.find_element_by_name("password").send_keys(password)
+    context.driver.find_element("name", "username").send_keys(user)
+    context.driver.find_element("name", "password").send_keys(password)
 
 
 @when(u'Click on login button')
 def clickLogin(context):
-    context.driver.find_element_by_class("button is-success").click()
+    button = context.driver.find_element("xpath", "//button[contains(., 'Login')]")
+    button.click() 
 
 
 @then(u'User will successfully be logged into todo list')
 def clickLogin(context):
     try:
-        text = context.driver.find_element_by_class("side-bar button is-primary is-light is-hovered")
-    except:
+        button = context.driver.find_element("xpath", "//button[contains(., 'Add New Item')]")
+   
+        if button == "Add New Item":
+            context.driver.close()
+            assert True, "Test Passed"
+    except Exception as e:
+        print(f"Exception at User will blahhhhh {e}")
         context.driver.close()
         assert False, "Test Failed"
-    if text == "Add New Item":
-        context.driver.close()
-        assert True, "Test Passed"
