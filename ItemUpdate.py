@@ -71,3 +71,17 @@ def delete_item():
         todo_list = []
         session['todo_list'] = todo_list
     redirect('/list')    
+
+# sortItems only has one method since it doesn't have a display, sorts items from list pulled from session before readding it to the session
+@route('/sortItems', method=['GET'])
+def sort_item():
+    session = request.environ.get('beaker.session')
+    # todo_item = int(request.query.get('todo_item'))
+    if 'todo_list' in session:
+        todo_list = session['todo_list']
+        todo_list.sort()
+        session['todo_list'] = todo_list
+    else:
+        todo_list = []
+        session['todo_list'] = todo_list
+    redirect('/list')    
