@@ -33,6 +33,6 @@ def clickLogin(context):
             context.driver.close()
             assert True, "Test Passed"
     except Exception as e:
-        print(f"Exception at User will blahhhhh {e}")
+        print(f"Exception at User {e}")
         context.driver.close()
         assert False, "Test Failed"
