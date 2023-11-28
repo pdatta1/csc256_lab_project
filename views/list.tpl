@@ -15,7 +15,11 @@
     
     <div class='column'>
         % for task in range(len(todo_list)):
-            <input class='radio my-2' type="radio" name="todo_item" value="{{task}}"> {{todo_list[task]}} </br>
+            %if task == 0:
+                <input class='radio my-2' type="radio" name="todo_item" value="{{task}}" checked="checked"> {{todo_list[task]}} </br>
+            % else:
+                <input class='radio my-2' type="radio" name="todo_item" value="{{task}}"> {{todo_list[task]}} </br>
+            % end
         % end
     </div>
 
