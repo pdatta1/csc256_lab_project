@@ -13,8 +13,7 @@ pip install beaker
     - pip install selenium
     - Run the server first
         - python Login.py
-    - python tests/selenium/LoginTest.py
-    - python tests/selenium/ItemUpdateTest.py
+    - python tests/selenium/selenium_test.py
 
 
 - Testing BDD

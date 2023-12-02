@@ -11,10 +11,10 @@ def wait_and_find_element(driver: webdriver.Chrome, by: By, element: str, timeou
     """
     Wait for an element to be present on the page and return it.
     """
-    # try:
-    return WebDriverWait(driver, timeout).until(lambda d: d.find_element(by, element))
-    # except: 
-    #     return None 
+    try:
+        return WebDriverWait(driver, timeout).until(lambda d: d.find_element(by, element))
+    except: 
+        return None 
 
 def login(driver: webdriver.Chrome, username: str, password: str) -> bool:
     """
