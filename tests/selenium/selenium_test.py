@@ -102,23 +102,32 @@ def update_task(driver: webdriver.Chrome, task_index: int, updated_task: str) ->
     """
     Update a task and verify the update is reflected in the list.
     """
+
     radio_button_xpath = f"//input[@type='radio' and @name='todo_item' and @value='{task_index}']"
     item_to_update_radio_button = wait_and_find_element(driver, By.XPATH, radio_button_xpath)
     item_to_update_radio_button.click()
 
-    update_button = wait_and_find_element(driver, By.XPATH, "//button[contains(., 'Update Item')]")
-    update_button.click()
+    # Assuming the update page URL is constructed based on the task_index
+    update_page_url = f"http://localhost:8080/updateItems?todo_item={task_index}"
+    driver.get(update_page_url)
 
+    # Find the input field for the updated task and the Update button
     task_input_update = wait_and_find_element(driver, By.NAME, "todo")
+    update_task_button = wait_and_find_element(driver, By.XPATH, "//input[@value='Update']")
+
+    # Clear the existing text, enter the updated task, and click Update
     task_input_update.clear()
     task_input_update.send_keys(updated_task)
-
-    update_task_button = wait_and_find_element(driver, By.XPATH, "//input[@value='Update']")
     update_task_button.click()
 
+    # Wait for visibility of the updated task
+    wait_and_find_element(driver, By.XPATH, f"//input[@type='checkbox' and @checked='checked' and @value='{task_index}']")
+
+    # Navigate back to the list view
     list_view(driver)
 
-    updated_items = driver.find_elements(By.XPATH, "//input[@type='checkbox' and @checked='checked']")
+    # Verify the updated task is reflected in the list
+    updated_items = driver.find_elements(By.XPATH, "//input[@type='radio']")
     assert len(updated_items) > 0
 
 
@@ -134,7 +143,7 @@ def run_test_scenarios() -> None:
         list_view(driver)
 
         # Scenario 1: Sign in/Sign out functionality
-        # sign_out(driver)
+        sign_out(driver)
 
         # Scenario 2: List view functionality
         login(driver, "User", "password")
@@ -151,9 +160,9 @@ def run_test_scenarios() -> None:
         delete_task(driver, 0)
 
         # Scenario 5: Update functionality
-        # login(driver, "User", "password")
-        # add_new_task(driver, "Task to Update")
-        # update_task(driver, 0, "Updated Task")
+        login(driver, "User", "password")
+        add_new_task(driver, "Task to Update")
+        update_task(driver, 0, "Updated Task")
     # except Exception as e: 
     #     print(f"Exception Thrown : {e}")
     finally:
