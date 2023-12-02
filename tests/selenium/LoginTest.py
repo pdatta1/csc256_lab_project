@@ -35,6 +35,21 @@ assert add_button is not None
 assert update_button is not None
 assert delete_button is not None
 
+
+
+# Assuming you've already logged in successfully
+
+# Sign out
+logout_button = driver.find_element(By.XPATH, "//button[contains(., 'Logout')]")
+logout_button.click()
+
+# Verify sign out
+login_button = driver.find_element(By.XPATH, "//input[@value='Login']")
+assert login_button is not None
+
+print("Sign-in/Sign-out scenario passed!")
+
+
 # Close the browser
 driver.quit()
 
