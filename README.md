@@ -24,3 +24,11 @@ pip install beaker
 - Testing TDD
     - pip install pytest
     - pytest
+
+- Performance Testing
+    - pip install locust
+    - pip install bs4
+    - locust -f tests/performance_testing/perform_test.py
+    - navigate to http://localhost:8089/ 
+        - enter amount of users, spawn rate and host, then click button
+        - your will be linked to a dashboard and you can view the performance stats
