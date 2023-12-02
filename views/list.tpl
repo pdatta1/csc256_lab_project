@@ -10,12 +10,19 @@
 
         <button class="side-bar button is-danger is-light " type="button" onclick="processForm('delete')">Delete Item</button>
 
-        <button class="side-bar button is-info is-light " type="button" onclick="processForm('delete')">Sort Items</button>
+        <button class="side-bar button is-info is-light " type="button" onclick="processForm('sort')">Sort Items</button>
+
+        <button class="side-bar button is-success is-light " type="button" onclick="processForm('json')">Generate Json</button>
+
     </div>
     
     <div class='column'>
         % for task in range(len(todo_list)):
-            <input class='radio my-2' type="radio" name="todo_item" value="{{task}}"> {{todo_list[task]}} </br>
+            %if task == 0:
+                <input class='radio my-2' type="radio" name="todo_item" value="{{task}}" checked="checked"> {{todo_list[task]}} </br>
+            % else:
+                <input class='radio my-2' type="radio" name="todo_item" value="{{task}}"> {{todo_list[task]}} </br>
+            % end
         % end
     </div>
 

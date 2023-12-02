@@ -11,6 +11,13 @@ function processForm(action) {
             break;
         case 'delete':
             form.action = '/deleteItems?todo_item=' + selectedValue;
+            break;
+        case 'sort':
+            form.action = '/sortItems';
+            break;
+        case 'json':
+            form.action = '/getJson';
+            break;
 
     }
 
