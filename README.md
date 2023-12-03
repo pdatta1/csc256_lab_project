@@ -32,3 +32,7 @@ pip install beaker
     - navigate to http://localhost:8089/ 
         - enter amount of users, spawn rate and host, then click button
         - your will be linked to a dashboard and you can view the performance stats
+
+- API TESTING
+    - pip install pytest
+    - pytest tests/api/test_api.py
