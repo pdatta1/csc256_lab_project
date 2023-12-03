@@ -4,21 +4,20 @@ from bs4 import BeautifulSoup
 
 
 class ToDoListUser(HttpUser):
-    task_set = ToDoListUser # Charne's part
     wait_time = between(5, 10) 
 
-     def on_start(self): # Charne's Part
+     def on_start(self): 
         self.login() 
 
    
-    def login(self):  # Charne's Part
+    def login(self):  
         self.client.post("/login", {
             "username": "User",
             "password": "password"
         })
 
     @task
-    def add_item(self): # Charne's Part
+    def add_item(self): 
         task_name = "Item Added"
         task_index = 0
         url = f"/newItems?todo_item={task_index}"
