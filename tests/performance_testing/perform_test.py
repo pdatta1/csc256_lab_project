@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 class ToDoListUser(HttpUser):
     wait_time = between(5, 10) 
 
-     def on_start(self): 
+    def on_start(self): 
         self.login() 
 
    
