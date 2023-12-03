@@ -1,3 +1,7 @@
+# Charne Robinson
+# November 25h, 2023
+# BDD Testing - Scenario 1
+
 from behave import *
 from selenium import webdriver
 
