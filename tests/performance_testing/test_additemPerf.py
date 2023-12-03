@@ -3,7 +3,7 @@
 # Performance Testing - Scenario 2
 
 
-from locust import HttpLocust, TaskSet, task, between
+from locust import HttpUser, TaskSet, task, between
 
 
 class UserBehavior(TaskSet):
@@ -21,10 +21,12 @@ class UserBehavior(TaskSet):
 
     @task
     def add_item(self):
-        add_item = "Tomato"
-    # I didn't know what else to put here :(
+        task_name = "Item Added"
+        task_index = 0
+        url = f"/newItems?todo_item={task_index}"
+        self.client.post(url, data={"todo": task_name})
 
-
-class WebsiteUser(HttpLocust):
+                                    
+class WebsiteUser(HttpUser):
     task_set = UserBehavior
     wait_time = between(5, 10)
