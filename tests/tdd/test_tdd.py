@@ -5,41 +5,39 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.fixture
-def driver():
-    driver = webdriver.Chrome()
-    yield driver
+def driver(context):
+    context.driver = webdriver.Chrome()
+    yield context
     driver.quit()
 
-def wait_and_find_element(driver, by, element, timeout=10):
-    return WebDriverWait(driver, timeout).until(
+def wait_and_find_element(context, by, element, timeout=10):
+    return WebDriverWait(context, timeout).until(
         EC.presence_of_element_located((by, element))
     )
 
-def login(driver, username, password):
-    driver.get("http://localhost:8080")
-    username_input = wait_and_find_element(driver, By.NAME, "username")
-    password_input = wait_and_find_element(driver, By.NAME, "password")
-    login_button = wait_and_find_element(driver, By.XPATH, "//button[contains(., 'Login')]")
+def login(context, username, password):
+    context.get("http://localhost:8080")
+    user_input = wait_and_find_element(context, By.NAME, "username")
+    passw_input = wait_and_find_element(context, By.NAME, "password")
+    login_button = wait_and_find_element(context, By.XPATH, "//button[contains(., 'Login')]")
 
-    assert username_input is not None
-    assert password_input is not None
+    assert user_input is not None
+    assert passw_input is not None
     assert login_button is not None
 
-    username_input.send_keys(username)
-    password_input.send_keys(password)
+    user_input.send_keys(username)
+    passw_input.send_keys(password)
     login_button.click()
 
-    # Check for the presence of the "Add New Item" button after successful login
-    add_new_item_button = wait_and_find_element(driver, By.XPATH, "//button[contains(., 'Add New Item')]")
-    assert add_new_item_button is not None
+    add_new_item = wait_and_find_element(driver, By.XPATH, "//button[contains(., 'Add New Item')]")
+    assert add_new_item is not None
 
-def test_scenario_1(driver):
+def test_scenario_1(context):
     # Log in with valid credentials
-    login(driver, "User", "password")
+    login(context, "User", "password")
 
-    # Verify successful login by checking the presence of the "Add New Item" button
-    add_new_item_button = wait_and_find_element(driver, By.XPATH, "//button[contains(., 'Add New Item')]")
-    assert add_new_item_button is not None
+    add_new_item = wait_and_find_element(driver, By.XPATH, "//button[contains(., 'Add New Item')]")
+    assert add_new_item is not None
 
 def test_scenario_2(driver):
     # Log in with valid credentials
