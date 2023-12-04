@@ -1,7 +1,3 @@
-# Charne Robinson
-# December 1st, 2023
-# API Testing - Scenario 1
-
 
 import requests
 import pytest 
@@ -10,18 +6,20 @@ ENDPOINT = "http://localhost:8080/"
 
 """
 Scenario 1: Logging in with valid credentials 
-
-Scenario 2: Add item to out to-do list 
 """
 
-def test_user_can_login_with_valid_credential(): 
-    login_payload = { 
-        'username': 'User',
-        'password': 'password'
+def test_validLogin():
+    login = {
+        "user_id": "User",
+        "password": "password",
     }
-    response = requests.post(ENDPOINT, json=login_payload)
+    response = requests.post(ENDPOINT + "/getjson", json=login)
     assert response.status_code == 200
 
+
+"""
+Scenario 2: Add item to out to-do list 
+"""
 def test_user_can_add_item():
    task_index = 0 
    response = requests.post(f"{ENDPOINT}/newItems?todo_item={task_index}")
