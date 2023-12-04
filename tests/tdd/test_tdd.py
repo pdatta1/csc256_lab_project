@@ -32,7 +32,7 @@ def login(context, username, password):
     add_new_item = wait_and_find_element(driver, By.XPATH, "//button[contains(., 'Add New Item')]")
     assert add_new_item is not None
 
-def test_scenario_1(context):
+def test_login_is_valid(context, username, password):
     # Log in with valid credentials
     login(context, "User", "password")
 
