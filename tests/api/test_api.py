@@ -42,4 +42,23 @@ def test_get_todo_list():
     print(data)
 
 
+"""
+Scenario 3: Logging in with invalid credentials
+"""
+def test_invalidLogin():
+    login = {
+        "user_id": "InvalidUser",
+        "password": "wrongpassword",
+    }
+    response = requests.post(ENDPOINT + "/getjson", json=login)
+    assert response.status_code == 401 
+
+"""
+Scenario 4: Adding item to the to-do list without authentication
+"""
+def test_unauthenticated_user_cannot_add_item():
+    task_index = 0
+    response = requests.post(f"{ENDPOINT}/newItems?todo_item={task_index}")
+    
+    assert response.status_code == 401
 
