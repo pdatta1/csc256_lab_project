@@ -54,6 +54,12 @@ class ToDoListUser(HttpUser):
         password = "password"
         self.client.post("/", data={"username": username, "password": password})
 
+    def test_invalid_login(self):
+        invalid_username = "InvalidUser"
+        invalid_password = "InvalidPassword"
+        self.client.post("/login", data={"username": invalid_username, "password": invalid_password}, name="invalid_login")
+    
+
     def verify_list_accuracy(self, response, task_deleted=False):
         html_content = response.text 
         soup = BeautifulSoup(html_content, 'html.parser')
