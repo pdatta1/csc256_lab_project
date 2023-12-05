@@ -26,3 +26,23 @@ def test_login_is_valid(context, username, password):
         print(f"Exception at User {e}")
         context.driver.close()
         assert False, "Test Failed"
+        
+def test_invalid_login(context, username, password):
+    try:
+        login(context, username, password)
+        error_message = context.driver.find_element("id", "error-message").text
+        assert "Invalid credentials" in error_message, "Test Passed"
+    except Exception as e:
+        print(f"Exception: {e}")
+        assert False, "Test Failed"
+
+
+def test_remove_item_from_todo_list(context, item_text):
+    try:
+        remove_item_from_todo_list(context, item_text)
+        assert not context.driver.find_elements("xpath", f"//li[contains(., '{item_text}')]")
+    except Exception as e:
+        print(f"Exception: {e}")
+        assert False, "Test Failed"
+
+
