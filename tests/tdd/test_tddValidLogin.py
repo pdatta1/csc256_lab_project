@@ -1,6 +1,3 @@
-# Charne Robinson
-# December 1st, 2023
-# TDD Testing - Scenario 1
 
 from selenium import webdriver
 
