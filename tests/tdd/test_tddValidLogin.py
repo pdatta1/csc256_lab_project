@@ -15,6 +15,8 @@ def login(context, user, password):
     context.driver.find_element("name", "password").send_keys(password)
 
 
+#Carine Rotich
+
 def test_login_is_valid(context, username, password):
     try:
         button = context.driver.find_element("xpath", "//button[contains(., 'Add New Item')]")
