@@ -80,7 +80,7 @@ def sort_item():
     # todo_item = int(request.query.get('todo_item'))
     if 'todo_list' in session:
         todo_list = session['todo_list']
-        todo_list.sort()
+        todo_list.sort(key=str.lower)
         session['todo_list'] = todo_list
     else:
         todo_list = []
