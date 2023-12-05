@@ -94,5 +94,5 @@ def get_json():
         todo_list = session['todo_list']
         response.content_type = 'application/json'
         return dumps(todo_list)
-    else:
-        redirect('/list')
+    # else:
+    #    redirect('/list')
