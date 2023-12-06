@@ -1,0 +1,148 @@
+Group 10 TDD (Test Driven Development) Lab 
+
+  
+
+1. Introduction 
+
+1.1. Purpose 
+
+Test-Driven Development is a software development approach where tests are written before the actual code. This methodology helps ensure that your code is correct, reliable, and maintainable. In this tutorial, you will learn the fundamentals of TDD, set up a TDD environment, and practice creating tests and implementing code. 
+
+1.2. Scope 
+
+This Sub SRS provides details specific to the TDD Lab, including its environment requirements, expected outcomes, and deliverables so you can have a better understanding of the TDD testing methodology and know how to write some test cases on your own. 
+
+1.4. What is TDD? 
+
+Test-driven development (TDD) is a software development practice that emphasizes writing tests before writing actual code. It follows a cyclical process: write the test that fails, write the minimum code that makes the test pass, and then refactor the code 
+
+1.3. Definitions and Acronyms 
+
+TDD: Test Driven Development 
+
+IDE: Integrated Development environment 
+
+CLI: Command Line Interface 
+
+`pytest`: A testing framework that allows you to easily create small, simple test 
+
+ 
+
+1.4. TDD cycle 
+
+Write a failing test 
+
+Make the test pass 
+
+Refactor the code 
+
+ 
+
+2. TDD Lab Overview 
+
+2.1. General Requirements 
+
+A computer with an internet connection. 
+
+A programming language of your choice (e.g., Python, JavaScript, Java). 
+
+A testing framework compatible with your chosen language (e.g., unit test for Python, Jest for JavaScript, JUnit for Java). 
+
+An Integrated Development Environment (IDE) or a text editor. 
+
+Basic knowledge of the chosen programming language. 
+
+  
+
+2.2. Lab Tools 
+
+Python  
+
+IDE (I.e., Visual studios) 
+
+Selenium (for web application testing in some scenarios) 
+
+  
+
+2.3. Making Test 
+
+Identify a small, specific piece of functionality you want to implement (e.g., a function to add two numbers). 
+
+In the testing framework, write a test that defines the expected behavior of the functionality. This test should fail initially since the functionality is not implemented yet. 
+
+ 
+
+3.1 Functional Requirements 
+
+Proper use of ‘PYTest’ 
+
+3.2  
+
+Proper Unit testing 
+
+3.3. Running Tests 
+
+Use proper tools to run tests. 
+
+Interpretation of test results, both passes, and failures. 
+
+  
+ 
+
+4. Non-functional Requirements 
+
+4.1. Documentation 
+
+Each feature file should have a corresponding explanation. 
+
+Each step definition should have comments that are clear. 
+
+When making comments make sure each one has meaning and there are not a bunch of them 
+
+A summary report detailing the number of passed, failed, and skipped tests. 
+
+Each scenario should illustrate a specific behavior of the application 
+
+  
+
+4.2. Collaboration 
+
+Open communication among team members when defining scenarios. 
+
+Use GitHub for version control 
+
+Microsoft Teams is used for discussions 
+
+ 
+
+ 
+
+5. Deliverables 
+
+A test report showing the results of what you think should happen. 
+
+A test report showing the results after running the tests. 
+
+ 
+
+ 
+
+ 
+
+6. Conclusion 
+
+This lab provides experience using TDD. TDD is an incremental approach to software development. By writing tests first, you ensure that your code meets the specified requirements. Continued practice of TDD will strengthen our skills and produce high-quality, maintainable code.. 
+  
+ 
+
+7. Appendices 
+
+7.1. Sample Scenarios 
+
+Scenario 1: Logging in with valid credentials 
+
+Scenario 2: Add item to out to-do list 
+
+Scenario 3: Bring up entered to do list and verify accuracy 
+
+Scenario 4: After verifying to do list accuracy, delete item and review list again to ensure it is not on there 
