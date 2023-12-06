@@ -1,0 +1,166 @@
+Group 10 API Testing 
+
+ 
+ 
+
+1. Introduction 
+
+1.1. Purpose 
+
+The purpose of this lab is to API testing is a crucial aspect of software development to ensure that RESTful services and endpoints function as expected. In this step-by-step tutorial, we'll explore API testing using both Postman, a popular GUI tool, and the requests library in Python for scripting. By the end, you'll be equipped to test APIs using a graphical interface and automate tests with Python. 
+
+1.2. Scope 
+
+This Sub SRS provides details specific to the API Lab, including its environments requirements, expected outcomes, and deliverables so you can have a better understanding of the API testing methodology. 
+
+1.4. What is API Testing? 
+
+API testing at its basic level is a contract between two pieces of software that are in a I give you this input, I'll give you this output. API is a type of software testing that involves testing application programming interfaces directly and as part of integration testing to determine if they 1meet the expected results for functionality, performance and security. 
+
+1.3. Definitions and Acronyms 
+
+API: Application Programming Interface   
+
+IDE: Integrated Development environment 
+
+CLI: Command Line Interface 
+
+Postman: A graphical interface for testing APIs. 
+
+`pytest`: A testing framework that allows you to easily create small, simple tests in Python. 
+
+`requests`: A Python library for making HTTP requests. 
+
+RSET: Representational State Transfer 
+
+ 
+ 
+
+2. BDD Lab Overview 
+
+2.1. General Requirements 
+
+Familiarity with the Gherkin language 
+
+Usage of Behave for implementing tests 
+
+Familiarity with command line interfaces 
+
+Clear distinction between Features, Scenarios, and Steps 
+
+A web application to test (i.e.., website) 
+
+Postman: Download and install Postman from postman.com. 
+
+Python: Install Python on your machine. You can download it from 
+
+requests Library: Install the requests library using the following command: 
+
+pip install request 
+
+ 
+
+2.2. Lab Tools 
+
+Postman 
+
+Python  
+
+IDE (I.e., Visual studios) 
+
+Selenium (for web application testing in some scenarios) 
+
+requests Library 
+
+ 
+
+ 
+ 
+
+3. Functional Requirements 
+
+3.1. Feature File Creation 
+
+Create multiple feature files demonstrating different scenarios. 
+
+Usage of Scenario Outline for repetitive tests. 
+
+Use of Tags for organizing and running specific groups of tests. 
+
+ 
+
+3.2. Step Definitions 
+
+Writing step definitions for each step in the feature file. 
+
+Implement Python functions to perform actions for each step. 
+
+Proper usage of step functions using step decorators 
+
+ 
+
+3.3. Running Tests 
+
+Use Behave commands to run tests. 
+
+Interpretation of test results, both passes, and failures. 
+
+Implement API testing ie: Status Code Validation for Valid Requests or Baseline Response Time: 
+ 
+
+4. Non-functional Requirements 
+
+4.1. Documentation 
+
+Each feature file should have a corresponding explanation. 
+
+Each step definition should have comments that are clear. 
+
+When making comments make sure each one has meaning and there aren't a bunch of them 
+
+A summary report detailing the number of passed, failed, and skipped tests. 
+
+Each scenario should illustrate a specific behavior of the application 
+
+ 
+
+4.2. Collaboration 
+
+Open communication among team members when defining scenarios. 
+
+Use GitHub for version control 
+
+Microsoft Teams is used for discussions 
+
+ 
+ 
+
+5. Deliverables 
+
+A minimum of 5 feature files demonstrating various scenarios. 
+
+Corresponding step definitions for all feature files. 
+
+A documentation report explaining the purpose and functionality of each feature file. 
+
+A test report showing the results after running the tests. 
+
+ 
+ 
+
+6. Conclusion 
+
+This lab should provide experience using Application Programming Interface (API) practices and tools. The SRS gives focus to completing objectives that are part of the API Lab. By completing these exercises, you'll gain practical experience in API testing using both graphical and scripted approaches. This hands-on practice will strengthen your skills in ensuring the reliability and functionality of RESTful services and endpoints. 
+ 
+
+7. Appendices 
+
+7.1. Sample Scenarios 
+
+Scenario 1: Logging in with valid credentials 
+
+Scenario 2: Add item to out to-do list 
+
+Scenario 3: Bring up entered to do list and verify accuracy 
+
+Scenario 4: After verifying to do list accuracy, delete item and review list again to ensure it is not on there 
